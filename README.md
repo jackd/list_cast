@@ -12,4 +12,13 @@ webdev server
 
 Inspect console output of `web/index.html`.
 
-Uncomment line 5 of `index.dart` and rebuild to remove error in `dart2js` version.
+## Fixes:
+* Uncomment line 5 of [index.dart](web/index.dart) and rebuild to remove error in `dart2js` version.
+```
+// animals = animals.cast<Animal>();
+```
+* Use `--omit-implicit-checks` (uncomment in [build.yaml](build.yaml))
+
+Other examples [here](https://github.com/matanlurey/dart_js_interop#generic-type-arguments).
+
+Issue [here](https://github.com/dart-lang/sdk/issues/34195).
